@@ -1,9 +1,10 @@
-# IMPORTANT: Bug Fixes
+# Face-Detection 커스텀
 
-## `navigator.getUserMedia`
-
-`navigator.getUserMedia` is now deprecated and is replaced by `navigator.mediaDevices.getUserMedia`. To fix this bug replace all versions of `navigator.getUserMedia` with `navigator.mediaDevices.getUserMedia`
-
-## Low-end Devices Bug
-
-The video eventListener for `play` fires up too early on low-end machines, before the video is fully loaded, which causes errors to pop up from the Face API and terminates the script (tested on Debian [Firefox] and Windows [Chrome, Firefox]). Replaced by `playing` event, which fires up when the media has enough data to start playing.
+### 소개
+Front-End에서 사용할 얼굴인식 모델 사용법입니다. Windows10 WebCam에서 테스트를 마친상태입니다.
+해당 모델은 Face Spoofing 방지가 이뤄지지 않는 모델입니다. 따라서 정확한 사용자 분류는 BackEnd의 모델에서 진행될 예정입니다.
+### 사용 내역
+얼굴이 인식되고 나서 몇 초간 인식이 이뤄져야 사용자가 얼굴인식 준비를 완료한 상태로 판단하고 서버에 요청할 용도로 사용할 것입니다.
+### 커스텀기능
+카메라상에서 얼굴이 인식되면 몇 초간 사람이 인식되었는지 Console 창을 통해서 확인할 수 있습니다.
+모델은 평가한 점수 또한 함께 확인할 수 있습니다.
