@@ -9,5 +9,5 @@ Front-End에서 사용할 얼굴인식 모델 사용법입니다. Windows10 WebC
 카메라상에서 얼굴이 인식되면 몇 초간 사람이 인식되었는지 Console 창을 통해서 확인할 수 있습니다.
 모델은 평가한 점수 또한 함께 확인할 수 있습니다.
 ## 출처
-해당 내용은 본 Repo를 Fork하여 커스텀하였음을 알려드립니다.
+해당 내용은 본 Repo를 Fork하여 커스텀하였음을 알려드립니다.<br>
 [ https://github.com/WebDevSimplified/Face-Detection-JavaScript ]
