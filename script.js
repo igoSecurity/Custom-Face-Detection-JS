@@ -1,4 +1,5 @@
-const video = document.getElementById('video')
+const video = document.getElementById('video');
+const txt = document.getElementById('txt');
 let count = 0
 Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
@@ -12,7 +13,7 @@ function startVideo() {
     { video: {} },
     stream => video.srcObject = stream,
     err => console.error(err)
-  )
+  ) 
 }
 
 video.addEventListener('play', () => {
@@ -30,6 +31,7 @@ video.addEventListener('play', () => {
       console.log(detections[0]['detection']['_score']); //정확도 정보 제공
       console.log(`${count/10}초간 보임`);
       count++;
+      txt.innerHTML=`정확도 : ${detections[0]['detection']['_score']}\n${count/10}초 동안 얼굴을 인식함`
     }
     else{
       count=0;
